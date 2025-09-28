@@ -20,64 +20,97 @@ git clone https://github.com/Tiuquoai/local_passport_website.git
 cd local_passport_website
 npm install
 node app.js
+```
 
-# a. Register
+Server chạy tại:  
+👉 [http://localhost:3000](http://localhost:3000)
 
-URL: http://localhost:3000/register
+---
 
-Method: POST
+## 🔑 Test chức năng
 
-Body (x-www-form-urlencoded):
+### a. Register  
+- **URL:** `POST http://localhost:3000/register`  
+- **Body (x-www-form-urlencoded):**
+  ```
+  username: admin1
+  password: 123456
+  ```  
 
-username: admin12
-
-password: 123456
 **Ảnh test:**  
-- Form Register:  
-![Register Form](/public/results/4_register.png)  
-- User lưu vào DB:  
-![Register User](/public/results/4_register_user.png)
-Kết quả: User mới được lưu vào DB. Redirect về trang login.
+![Register Form](public/results/4_register.png)  
+![User in DB](public/results/4_register_user.png)
 
-# b. Login
+---
 
-URL: http://localhost:3000/login
+### b. Login  
+- **URL:** `POST http://localhost:3000/login`  
+- **Body (x-www-form-urlencoded):**
+  ```
+  username: admin1
+  password: 123456
+  ```  
 
-Method: POST
+**Ảnh test:**  
+![Login](public/results/4_login.png)  
+![Cookie](public/results/4_cookie.png)
 
-Body (x-www-form-urlencoded):
+---
 
-username: admin12
+### c. Profile  
+- **URL:** `GET http://localhost:3000/profile`  
 
-password: 123456
-**ảnh test:** 
-![Login](/public/results/4_login.png)  
-- Cookie lưu trong Postman:  
-![Cookie](/public/results/4_cookie.png)
-Kết quả: Nếu đúng → redirect sang /profile (hiện Welcome admin1).
-Nếu sai → quay lại trang login.
-
-# c. Profile
-
-URL: http://localhost:3000/profile
-
-Method: GET
-
-Kết quả: Hiện thông tin user (HTML view), ví dụ:
-
+**Kết quả hiển thị:**  
+```html
 <h2>Welcome admin1</h2>
 <a href="/logout">Logout</a>
+```  
 
-Nếu chưa login → redirect về trang login.
-ảnh test:
-![Profile](/public/results/4_profile.png)
+Nếu chưa login → redirect về login.  
 
-# d. Logout
+**Ảnh test:**  
+![Profile](public/results/4_profile.png)
 
-URL: http://localhost:3000/logout
+---
 
-Method: GET
+### d. Logout  
+- **URL:** `GET http://localhost:3000/logout`  
+- **Kết quả:** Session bị xoá, redirect về trang login  
 
-Kết quả: Session bị xoá, redirect về /login.
-ảnh test:
-![Logout](/public/results/4_logout.png)
+**Ảnh test:**  
+![Logout](public/results/4_logout.png)
+
+---
+
+## 📂 Cấu trúc thư mục
+
+```
+local_passport_website/
+├── README.md
+├── app.js
+├── config/
+│   └── passport.js
+├── models/
+│   └── user.js
+├── routes/
+│   └── auth.js
+├── views/
+│   ├── login.ejs
+│   ├── register.ejs
+│   └── profile.ejs
+├── public/
+│   └── results/
+│       ├── 4_login.png
+│       ├── 4_profile.png
+│       ├── 4_logout.png
+│       ├── 4_register.png
+│       ├── 4_register_user.png
+│       └── 4_cookie.png
+└── package.json
+```
+
+---
+
+## 👤 Author
+- Name: **Tiuquoai**  
+- GitHub: [Tiuquoai](https://github.com/Tiuquoai)

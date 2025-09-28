@@ -17,7 +17,7 @@ Passport sẽ xác thực user dựa trên `username` và `password` đã đư�
 
 ### 1. Clone project
 ```bash
-git clone https://github.com/<your-username>/local_passport_website.git
+git clone https://github.com/Tiuquoai/local_passport_website.git
 cd local_passport_website
 # a. Register
 
@@ -30,11 +30,11 @@ Body (x-www-form-urlencoded):
 username: admin1
 
 password: 123456
-ảnh test:
+**Ảnh test:**  
 - Form Register:  
-  ![Register Form](./public/results/4_register.png)  
+![Register Form](./public/results/4_register.png)  
 - User lưu vào DB:  
-  ![Register User](./public/results/4_register_user.png)
+![Register User](./public/results/4_register_user.png)
 Kết quả: User mới được lưu vào DB. Redirect về trang login.
 
 # b. Login
@@ -48,10 +48,10 @@ Body (x-www-form-urlencoded):
 username: admin1
 
 password: 123456
-ảnh test:
-  ![Login](./public/results/4_login.png)  
+**ảnh test:** 
+![Login](./public/results/4_login.png)  
 - Cookie lưu trong Postman:  
-  ![Cookie](./public/results/4_cookie.png)
+![Cookie](./public/results/4_cookie.png)
 Kết quả: Nếu đúng → redirect sang /profile (hiện Welcome admin1).
 Nếu sai → quay lại trang login.
 
@@ -68,7 +68,7 @@ Kết quả: Hiện thông tin user (HTML view), ví dụ:
 
 Nếu chưa login → redirect về trang login.
 ảnh test:
-  ![Profile](./public/results/4_profile.png)
+![Profile](./public/results/4_profile.png)
 
 # d. Logout
 
@@ -78,4 +78,4 @@ Method: GET
 
  Kết quả: Session bị xoá, redirect về /login.
  ảnh test:
-   ![Logout](./public/results/4_logout.png)
+![Logout](./public/results/4_logout.png)

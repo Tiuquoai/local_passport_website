@@ -32,7 +32,7 @@ Server chạy tại: [http://localhost:3000](http://localhost:3000)
 - **URL:** `POST http://localhost:3000/register`  
 - **Body (x-www-form-urlencoded):**
   ```
-  username: admin1
+  username: admin12
   password: 123456
   ```  
 
@@ -46,7 +46,7 @@ Server chạy tại: [http://localhost:3000](http://localhost:3000)
 - **URL:** `POST http://localhost:3000/login`  
 - **Body (x-www-form-urlencoded):**
   ```
-  username: admin1
+  username: admin12
   password: 123456
   ```  
 
@@ -61,7 +61,7 @@ Server chạy tại: [http://localhost:3000](http://localhost:3000)
 
 **Kết quả hiển thị:**  
 ```html
-<h2>Welcome admin1</h2>
+<h2>Welcome admin12</h2>
 <a href="/logout">Logout</a>
 ```  
 

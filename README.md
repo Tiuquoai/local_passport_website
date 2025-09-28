@@ -22,12 +22,11 @@ npm install
 node app.js
 ```
 
-Server chạy tại:  
-👉 [http://localhost:3000](http://localhost:3000)
+Server chạy tại: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🔑 Test chức năng
+## Test chức năng
 
 ### a. Register  
 - **URL:** `POST http://localhost:3000/register`  
@@ -82,7 +81,7 @@ Nếu chưa login → redirect về login.
 
 ---
 
-## 📂 Cấu trúc thư mục
+## Cấu trúc thư mục
 
 ```
 local_passport_website/
@@ -111,6 +110,6 @@ local_passport_website/
 
 ---
 
-## 👤 Author
+## Author
 - Name: **Tiuquoai**  
 - GitHub: [Tiuquoai](https://github.com/Tiuquoai)
